@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    Flask Site
+{% endblock title %}
+
+
+{% block content %}
+    <div>
+        <form action="" method="POST">
+            <h1>Enther The Chat Room</h1>
+            <div class="form-control">
+                <label for="name">Name:</label>
+                <input class="form-control" name="name" placeholder="Your Name..." type="text" value="{{name}}">
+                {% if errorN %}
+                    <ul><li style="color: red; margin-top: 5px; list-style: none;" >{{errorN}}</li></ul>
+                {% endif %}
+            </div>
+            <div class="join form-control">
+                <input class="form-control" type="text" placeholder="Room Code" name="code" value="{{code}}">
+                {% if errorC %}
+                <ul><li style="color: red; margin-top: 5px; list-style: none;" >{{errorC}}</li></ul>
+                {% endif %}
+                <button type="submit" style="margin-top: 5px;" name="join" class="joinRoom btn">Join a Room</button>
+            </div>
+            <button type="submit" name="create" class="create btn">Create a Room</button>
+        </form>
+    </div>
+
+    <script>
+        
+
+
+    </script>
+{% endblock content %}
+    

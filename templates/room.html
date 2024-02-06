@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Chat Room
+{% endblock title %}
+
+
+{% block content %}
+    <div>
+        <a style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 3rem 0 0 4rem;
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+        " href="/" >Home</a>
+        <div  style="margin-top:3rem; width: 100%;">
+            <div class="message-box">
+                <div style="display: flex; padding: 5px; justify-content:center;">
+                    <div>
+                        <h2>User: {{name}}</h2>
+                        <h3>Room Code: {{room}}</h3>
+                    </div>
+                </div>
+                <div class="messages" id="messages" ></div>
+                <div class="input" style="
+                    display: flex;
+                    padding: 5px;
+                ">
+                    <input style="padding: 5px;" rows='3' id='message' name='message' placeholder="white your message..." type="text">
+                    <button type="button" class="btn create" id='send-btn' name='send' onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script type="text/javascript">
+        const sio = io()
+        const messages = document.getElementById('messages')
+        const currentUser = `{{name}}`
+        console.log(currentUser)
+        const createMessage = (name, msg) =>{
+            const content = `
+                <div class=${name == currentUser ? 'user-text' : 'other-text'}>
+                    <span>${ name != currentUser ? '<strong>'+name+'</strong>:' : ''} ${msg}</span>
+                    <span class='muted'>${new Date().toLocaleString()}</span> 
+                </div>
+            `
+            messages.innerHTML += content
+        }
+        sio.on('message', (data) =>{
+            name = data.name
+            msg = data.message
+            createMessage(name, msg)
+        })
+
+        
+        const sendMessage = () => {
+            const message = document.getElementById('message')
+            if (message.value == '') return;
+            sio.emit('message', {data:message.value} )
+            message.value = ''
+            console.log('messaged was send')
+        }       
+        
+    </script>
+    
+        
+    {% for msg in messages %}
+        <script>
+            createMessage('{{msg.name}}', '{{msg.message}}')
+        </script>
+    {% endfor %}
+
+{% endblock content %}
+    
