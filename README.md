@@ -8,9 +8,9 @@ Welcome to the Flask-SocketIO Chat System, a simple and interactive chat applica
 
 Make sure you have Python installed on your machine. If not, you can download it from [python.org](https://www.python.org/).
 
-To check if Python is installed, open a command terminal (cmd) and type:
+To check if Python is installed, open a command terminal (cmd) and type: python
 
-python
+
 If Python is installed, you'll see a Python prompt. Type exit() to exit.
 
 Installing Dependencies
@@ -34,9 +34,29 @@ On the home page, you'll find input boxes for your name and a room code, along w
 To create a room, enter your desired username, click "Create Room," and note the generated room code.
 To join a room, open the application in another browser, enter your username, and input the room code obtained from the first user.
 ## Start chatting with others in the room!
-Additional Information
+
+### TO Create a Room
+![image](https://github.com/mukit-hasan/Flask-chat-app/assets/49628663/22067797-6cbd-44ad-87d6-23729b3b9196)
+
+### Get the Room Code
+
+![image](https://github.com/mukit-hasan/Flask-chat-app/assets/49628663/d9646c53-f1d5-4cfc-a470-d29d601db63e)
+
+### Join a Room with Room code
+
+![image](https://github.com/mukit-hasan/Flask-chat-app/assets/49628663/68869ef5-0296-4629-92f0-5263001ae3c8)
+
+
+![image](https://github.com/mukit-hasan/Flask-chat-app/assets/49628663/ac057a7e-76a3-437c-9e6f-c4c165d832ed)
+
+
+### Additional Information
+
 Visit Python Official Website to download and install [python.org](https://www.python.org/).
+
 Explore Flask documentation here [Flask](https://flask.palletsprojects.com/en/3.0.x/) .
+
 Learn more about Flask-SocketIO here [Flask-SocketIO](https://flask-socketio.readthedocs.io/en/latest/) .
+
 # Enjoy Chatting!
 Feel free to contribute, report issues, or add new features. Happy chatting!
