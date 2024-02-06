@@ -36,7 +36,8 @@ To join a room, open the application in another browser, enter your username, an
 ## Start chatting with others in the room!
 
 ### TO Create a Room
-![image](https://github.com/mukit-hasan/Flask-chat-app/assets/49628663/22067797-6cbd-44ad-87d6-23729b3b9196)
+![image](https://github.com/mukit-hasan/Flask-chat-app/assets/49628663/4112a808-d8f5-4f35-b45a-56fbeee5a5dc)
+
 
 ### Get the Room Code
 
@@ -47,7 +48,7 @@ To join a room, open the application in another browser, enter your username, an
 ![image](https://github.com/mukit-hasan/Flask-chat-app/assets/49628663/68869ef5-0296-4629-92f0-5263001ae3c8)
 
 
-![image](https://github.com/mukit-hasan/Flask-chat-app/assets/49628663/ac057a7e-76a3-437c-9e6f-c4c165d832ed)
+![image](https://github.com/mukit-hasan/Flask-chat-app/assets/49628663/94101522-1258-40d5-9b00-936fca52bfc4)
 
 
 ### Additional Information
